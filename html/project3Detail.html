@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Projet</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .tech-badge {
+            background-color: #f8f9fa;
+            color: #212529;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+
+        .tech-badge:hover {
+            transform: scale(1.05);
+            background-color: #e9ecef;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Couleurs spécifiques pour chaque technologie au survol */
+        .tech-badge:hover i.fa-html5 {
+            color: #e34f26;
+        }
+
+        .tech-badge:hover i.fa-css3-alt {
+            color: #264de4;
+        }
+
+        .tech-badge:hover i.fa-js {
+            color: #f7df1e;
+        }
+
+        .tech-badge:hover i.fa-php {
+            color: #777BB4;
+        }
+
+        .tech-badge:hover i.fa-database {
+            color: #336791;
+        }
+
+        .tech-badge:hover i.fa-server {
+            color: #5bc0de;
+        }
+
+        .tech-badge:hover i.fa-symfony {
+            color: #000000;
+        }
+
+        .project-screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .project-screenshot:hover {
+            transform: scale(1.02);
+        }
+
+        .error-container {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body class="projects-page">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assets/images/website_logo.png" alt="Logo M" width="40" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="timeline.html">Parcours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="veille.html">Veille</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container error-container d-flex flex-column justify-content-center align-items-center">
+        <i class="fas fa-desktop fa-5x mb-4 text-primary"></i>
+        <h1 class="text-center mb-4">Projet de stage de première année de BTS</h1>
+
+        <!-- Section capture d'écran -->
+        <div class="text-center w-100">
+            <h3 class="mb-3">Aperçu du projet</h3>
+            <img src="/assets/images/project3.png" alt="Capture du projet" class="project-screenshot img-fluid">
+        </div>
+
+        <!-- Section technologies utilisées -->
+        <div class="text-center w-100 mt-4">
+            <h3 class="mb-3">Technologies utilisées</h3>
+            <div class="tech-list">
+                <span class="tech-badge"><i class="fab fa-html5 me-2"></i>HTML5</span>
+                <span class="tech-badge"><i class="fab fa-css3-alt me-2"></i>CSS3</span>
+                <span class="tech-badge"><i class="fab fa-js me-2"></i>JavaScript</span>
+                <span class="tech-badge"><i class="fab fa-php me-2"></i>PHP</span>
+                <span class="tech-badge"><i class="fas fa-database me-2"></i>PostgreSQL</span>
+                <span class="tech-badge"><i class="fab fa-symfony me-2"></i>Symfony</span>
+            </div>
+        </div>
+
+        <a href="projects.html" class="btn btn-primary mt-4 px-4 py-2">Retour aux projets</a>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <div class="social-icons mb-3">
+                <a href="https://www.linkedin.com/in/matthieu-luiggi/" class="btn btn-outline-light m-2">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/MatthieuLUIGGI" class="btn btn-outline-light m-2">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:matluiggi@sfr.fr" class="btn btn-outline-light m-2">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p>© 2025 Matthieu | Portfolio</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

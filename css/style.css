@@ -1,0 +1,352 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(
+    to right,
+    #0f2027,
+    #203a43,
+    #2c5364
+  ); /* Fond appliqué ici */
+  color: white; /* Texte en blanc pour être lisible sur le fond sombre */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Hauteur minimale de 100vh */
+  margin: 0; /* Supprime les marges par défaut du body */
+}
+
+/* === NAVBAR === */
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  margin-left: 1rem;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto; /* Coller le footer en bas */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh; /* Utilisez min-height au lieu de height */
+  display: flex;
+  align-items: center;
+  padding: 50px 0; /* Ajoutez un padding pour éviter que le contenu ne touche les bords */
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.profile-picture img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-picture img:hover {
+  transform: scale(1.1);
+}
+
+/* === PAGE PROJETS === */
+
+.projects-page {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-container {
+  text-align: center;
+  width: 80%;
+  margin: 50px auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.card {
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  width: 80%;
+}
+
+.card-left {
+  transform: translateX(-100%) scale(0.8);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.card-center {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+.card-right {
+  transform: translateX(100%) scale(0.8);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.2); /* Fond semi-transparent */
+  color: white; /* Couleur du texte en blanc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour donner un effet de profondeur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button i {
+  font-size: 24px; /* Taille de l'icône */
+}
+
+.buttons button:hover {
+  background: rgba(255, 255, 255, 0.4); /* Fond plus clair au survol */
+  transform: scale(1.1); /* Agrandissement au survol */
+}
+
+/* === PAGE TIMELINE === */
+
+.timeline-page {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-header {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.timeline-header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.timeline-container {
+  padding: 20px 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background: #007bff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-content {
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.timeline-content h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* === PAGE VEILLE === */
+
+.veille-page {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.veille-container {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.veille-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.veille-container .lead {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.veille-iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* === RESPONSIVE === */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .profile-picture img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+  }
+
+  .timeline::after {
+    left: 0;
+  }
+
+  .veille-container h1 {
+    font-size: 2rem;
+  }
+
+  .veille-container .lead {
+    font-size: 1rem;
+  }
+
+  .veille-iframe {
+    height: 400px;
+  }
+
+  .card-container {
+    height: 300px;
+  }
+
+  .card {
+    width: 200px;
+    height: 250px;
+  }
+}

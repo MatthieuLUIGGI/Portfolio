@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="generateur.css">
+    <title>MDP Générateur</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Générateur de mot de passe</h2>
+        <div class="wrapper">
+            <div class="input-box">
+                <input type="text" disabled>
+                <button class="copy-btn">Copier</button>
+            </div>
+            <div class="pass-indicator"></div>
+            <div class="pass-length">
+                <div class="details">
+                    <label class="title">Longueur du mot de passe</label>
+                </div>
+                <br>
+                <input type="number" min="10" max="30" value="10" step="1">
+            </div>
+            <div class="pass-settings">
+                <label class="title">Paramètres du mot de passe</label>
+                <ul class="options">
+                    <li class="option">
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">Minuscules (a-z)</label>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="uppercase" checked>
+                        <label for="uppercase">Majuscules (A-Z)</label>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="numbers" checked>
+                        <label for="numbers">Chiffres (0-9)</label>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="symbols">
+                        <label for="symbols">Caractères spéciaux (!-$^+)</label>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="exc-duplicate">
+                        <label for="exc-duplicate">Exclure les doublons</label>
+                    </li>
+                    <li class="option">
+                        <input type="checkbox" id="spaces">
+                        <label for="spaces">Inclure les espaces</label>
+                    </li>
+                </ul>
+            </div>
+            <button class="generate-btn">Générer le mot de passe</button>
+        </div>
+    </div>
+    <script src="generateur.js"></script>
+</body>
+</html>
